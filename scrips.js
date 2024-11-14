@@ -74,26 +74,7 @@ function editEmployee(employeeId) {
 }
 
 // Función para renderizar la tabla de empleados
-function renderEmployeeTable() {
-    // Limpiar la tabla antes de volver a renderizar
-    employeeTable.innerHTML = "";
 
-    // Mostrar cada empleado en la tabla
-    employees.forEach(employee => {
-        const row = employeeTable.insertRow();
-        row.innerHTML = `
-            <td>${employee.id}</td>
-            <td>${employee.name}</td>
-            <td>${employee.position}</td>
-            <td>${employee.email}</td>
-            <td>${employee.hireDate}</td>
-            <td>
-                <button onclick="editEmployee(${employee.id})">Editar</button>
-                <button onclick="deleteEmployee(${employee.id})">Eliminar</button>
-            </td>
-        `;
-    });
-}
 
 // Inicializar la tabla de empleados (si ya hay empleados en el array)
 renderEmployeeTable();
